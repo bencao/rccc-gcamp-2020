@@ -4,72 +4,13 @@ import SEO from "../components/seo";
 import Img from "gatsby-image";
 import CallOutBanner from "@kiwicom/orbit-components/lib/CallOutBanner";
 import Button from "@kiwicom/orbit-components/lib/Button";
-import Card, {
-  CardHeader,
-  CardSection,
-  CardSectionHeader,
-  CardSectionContent
-} from "@kiwicom/orbit-components/lib/Card";
-import Heading from "@kiwicom/orbit-components/lib/Heading";
 import List, { ListItem } from "@kiwicom/orbit-components/lib/List";
-import Table, {
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody
-} from "@kiwicom/orbit-components/lib/Table";
 
-import SCHEDULES from "../data/schedule.json";
-import SPEAKERS from "../data/speakers.json";
+import { schedule as SCHEDULE } from "../data/schedule.json";
+import { speakers as SPEAKERS } from "../data/speakers.json";
 
-const Speaker = ({ name, avatarUrl, description }) => (
-  <CardSection>
-    <CardSectionHeader>
-      <img src={avatarUrl} width="160" height="200" />
-      <Heading type="title3" element="h3">
-        {name}
-      </Heading>
-    </CardSectionHeader>
-    <CardSectionContent>{description}</CardSectionContent>
-  </CardSection>
-);
-
-const Speakers = () => (
-  <Card>
-    <CardHeader title="讲员信息" />
-    {SPEAKERS.map(s => (
-      <Speaker {...s} />
-    ))}
-  </Card>
-);
-
-const Agenda = () => (
-  <Card>
-    <CardHeader title="日程安排" />
-    <CardSection>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>日期</TableCell>
-            <TableCell>上午</TableCell>
-            <TableCell>下午</TableCell>
-            <TableCell>晚上</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {SCHEDULES.map(s => (
-            <TableRow>
-              <TableCell>{s.date}</TableCell>
-              <TableCell>{s.morning}</TableCell>
-              <TableCell>{s.afternoon}</TableCell>
-              <TableCell>{s.evening}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </CardSection>
-  </Card>
-);
+import Agenda from "../components/agenda";
+import Speakers from "../components/speakers";
 
 const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
   <Layout>
@@ -96,8 +37,8 @@ const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
       </List>
     </CallOutBanner>
 
-    <Agenda />
-    <Speakers />
+    <Agenda schedule={SCHEDULE} />
+    <Speakers speakers={SPEAKERS} />
   </Layout>
 );
 
