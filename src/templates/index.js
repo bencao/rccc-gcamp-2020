@@ -1,6 +1,4 @@
 import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
 import Img from "gatsby-image";
 import CallOutBanner from "@kiwicom/orbit-components/lib/CallOutBanner";
 import Button from "@kiwicom/orbit-components/lib/Button";
@@ -14,16 +12,14 @@ import Speakers from "../components/speakers";
 import Song from "../components/song";
 
 const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
-  <Layout>
-    <SEO title="生之追寻2020" description="生之追寻2020" />
-
+  <>
     <CallOutBanner
       title="2020年5月24日週五晚-27日週一 國殤節長週末 賓州費城郊區 Eastern University"
       description={
         <address>1300 Eagle Road, St. Davids, PA 19087-3696</address>
       }
       illustration={<Img fixed={logoImage} />}
-      actions={<Button>现在注册</Button>}
+      actions={<Button href="/registration">现在注册</Button>}
     >
       <List type="secondary">
         <ListItem>
@@ -55,10 +51,10 @@ const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
       </List>
     </CallOutBanner>
 
-    <Agenda schedule={SCHEDULE} />
     <Speakers speakers={SPEAKERS} />
+    <Agenda schedule={SCHEDULE} />
     <Song />
-  </Layout>
+  </>
 );
 
 export default IndexPage;

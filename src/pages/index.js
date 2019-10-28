@@ -1,8 +1,15 @@
 import React from "react";
 import IndexTemplate from "../templates/index";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Navigation from "../components/navigation";
 
 export default ({ data }) => (
-  <IndexTemplate logoImage={data.logoImage.childImageSharp.fixed} />
+  <Layout>
+    <SEO title="生之追寻2020" description="生之追寻2020" />
+    <Navigation current="index" />
+    <IndexTemplate logoImage={data.logoImage.childImageSharp.fixed} />
+  </Layout>
 );
 
 export const query = graphql`
