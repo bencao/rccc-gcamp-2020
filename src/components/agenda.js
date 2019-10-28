@@ -25,7 +25,7 @@ export default ({ schedule }) => (
         </TableHead>
         <TableBody>
           {schedule.map(s => (
-            <TableRow>
+            <TableRow key={s.date}>
               <TableCell>{s.date}</TableCell>
               <TableCell>{s.morning}</TableCell>
               <TableCell>{s.afternoon}</TableCell>

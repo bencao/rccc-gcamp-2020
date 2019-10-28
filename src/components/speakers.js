@@ -7,23 +7,19 @@ import Card, {
   CardSectionContent
 } from "@kiwicom/orbit-components/lib/Card";
 
-const Speaker = ({ name, avatarUrl, description }) => (
-  <CardSection>
-    <CardSectionHeader>
-      <img src={avatarUrl} width="160" height="200" />
-      <Heading type="title3" element="h3">
-        {name}
-      </Heading>
-    </CardSectionHeader>
-    <CardSectionContent>{description}</CardSectionContent>
-  </CardSection>
-);
-
 export default ({ speakers }) => (
   <Card>
-    <CardHeader title="讲员信息" />
+    <CardHeader title="講員信息" />
     {speakers.map(s => (
-      <Speaker {...s} />
+      <CardSection key={s.name}>
+        <CardSectionHeader>
+          <img src={s.avatarUrl} width="160" height="200" />
+          <Heading type="title3" element="h3">
+            {s.name}
+          </Heading>
+        </CardSectionHeader>
+        <CardSectionContent>{s.description}</CardSectionContent>
+      </CardSection>
     ))}
   </Card>
 );
