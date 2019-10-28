@@ -11,13 +11,14 @@ import { speakers as SPEAKERS } from "../data/speakers.json";
 
 import Agenda from "../components/agenda";
 import Speakers from "../components/speakers";
+import Song from "../components/song";
 
 const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
   <Layout>
     <SEO title="生之追寻2020" description="生之追寻2020" />
 
     <CallOutBanner
-      title="2019年5月24日週五晚-27日週一 國殤節長週末 賓州費城郊區 Eastern University"
+      title="2020年5月24日週五晚-27日週一 國殤節長週末 賓州費城郊區 Eastern University"
       description={
         <address>1300 Eagle Road, St. Davids, PA 19087-3696</address>
       }
@@ -26,19 +27,37 @@ const IndexPage = ({ logoImage, verseBgImage, speakerImages }) => (
     >
       <List type="secondary">
         <ListItem>
-          宣傳單張（<a href="#">繁體版</a> <a href="#">简体版</a>）
+          宣傳單張（
+          <a href="http://www.rccc.org/gcamp/QFL_Brochure_2019_fanti_final_version.pdf">
+            繁體版
+          </a>{" "}
+          <a href="http://www.rccc.org/gcamp/QFL_Brochure_2019_jianti_final_version.pdf">
+            简体版
+          </a>
+          ）
         </ListItem>
         <ListItem>
-          宣傳海報（<a href="#">繁體版</a> <a href="#">简体版</a>）
+          宣傳海報（
+          <a href="http://www.rccc.org/gcamp/QFLGC2019_Poster_Final_F.png">
+            繁體版
+          </a>{" "}
+          <a href="http://www.rccc.org/gcamp/QFLGC2019_Poster_Final_J.png">
+            简体版
+          </a>
+          ）
         </ListItem>
         <ListItem>
-          宣傳視頻（<a href="#">Promotion Video</a>） <a href="#">點擊下載</a>
+          宣傳視頻（<a href="https://youtu.be/VzPP-6GYfMg">Promotion Video</a>）{" "}
+          <a href="https://drive.google.com/file/d/1EEXOGPj_ZQlU0N9GpA870qg8OJb5RtEg/view?usp=drivesdk">
+            點擊下載
+          </a>
         </ListItem>
       </List>
     </CallOutBanner>
 
     <Agenda schedule={SCHEDULE} />
     <Speakers speakers={SPEAKERS} />
+    <Song />
   </Layout>
 );
 

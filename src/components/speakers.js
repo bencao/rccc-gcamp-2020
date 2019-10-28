@@ -13,7 +13,7 @@ export default ({ speakers }) => (
     {speakers.map(s => (
       <CardSection key={s.name}>
         <CardSectionHeader>
-          <img src={s.avatarUrl} width="160" height="200" />
+          <img src={s.avatarUrl} alt={s.name} width="160" height="200" />
           <Heading type="title3" element="h3">
             {s.name}
           </Heading>
