@@ -20,9 +20,24 @@ collections:
             widget: list
             fields:
               - { label: "Date", name: "date", format: "MM/DD", widget: "date" }
-              - { label: "Morning", name: "morning", widget: "string" }
-              - { label: "Afternoon", name: "afternoon", widget: "string" }
-              - { label: "Evening", name: "evening", widget: "string" }
+              - {
+                  label: "Morning",
+                  name: "morning",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Afternoon",
+                  name: "afternoon",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Evening",
+                  name: "evening",
+                  widget: "string",
+                  required: false,
+                }
 
       - label: "Speakers"
         name: speakers
