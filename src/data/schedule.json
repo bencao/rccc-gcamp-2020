@@ -2,8 +2,8 @@
   "schedule": [
     {
       "date": "5/24",
-      "morning": "NONE",
-      "afternoon": "NONE",
+      "morning": "",
+      "afternoon": "",
       "evening": "注册"
     },
     {
@@ -22,7 +22,7 @@
       "date": "5/27",
       "morning": "Day 3 Session 1",
       "afternoon": "Heading Home",
-      "evening": "NONE"
+      "evening": ""
     }
   ]
 }
