@@ -6,7 +6,7 @@
   "author": "rccc.org",
   "dependencies": {
     "@kiwicom/orbit-components": "^0.65.0",
-    "gatsby": "^2.17.5",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-netlify": "^2.1.23",
     "gatsby-plugin-netlify-cms": "^4.1.26",
